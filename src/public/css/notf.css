@@ -1,0 +1,144 @@
+ .icon-button {
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 39px;
+     height: 40px;
+     color: #070707;
+     background: #ffffff;
+     border: none;
+     outline: none;
+     padding: 18px;
+     border-radius: 50%;
+ }
+ 
+ .icon-button:hover {
+     cursor: pointer;
+ }
+ 
+ .icon-button:active {
+     background: #fcfbfb;
+ }
+ 
+ .icon-button__badge {
+     position: absolute;
+     top: -10px;
+     right: -10px;
+     width: 25px;
+     height: 25px;
+     background: red;
+     color: #ffffff;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+ }
+ 
+ .notf {
+     position: relative;
+     font-size: 30px;
+     color: white;
+     float: right;
+     top: 20px;
+     line-height: 80px;
+     margin-right: 40px;
+     cursor: pointer;
+     display: none;
+ }
+ 
+ @media (max-width:1052px) {
+     .notf {
+         display: block;
+     }
+     .linotf {
+         visibility: hidden;
+     }
+ }
+ 
+ @media (max-width:1152px) {
+     .notf {
+         display: block;
+     }
+     .linotf {
+         visibility: hidden;
+     }
+ }
+
+
+ /*--> carrito */
+ #carrito{
+     
+    background: rgb(13, 13, 39);
+     position: fixed;
+     width: 100%;
+     height: 100%;
+     top: 80px;
+     right: 0;
+     transition: all 0.5s;
+     z-index: 1;
+     overflow: hidden;
+     overflow-y: scroll;
+ }
+ 
+ #carrito.active{
+    transition: all 0.5s;
+    right: -100%;
+ 
+     
+ }
+  #carrito ul li {
+     
+    color: rgba(230, 230, 230, 0.9);
+    padding: 40px 10px;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+    text-align: left;
+  }
+  .cantidad {
+    font-size: 20px;
+    inline-size: 60px;
+    border-radius: 3px;
+  }
+  .borrar-producto {
+    background: red;
+    width: 70px;
+    height: 40px;
+    border-radius: 10%;
+    font-weight: bold;
+    color: white;
+  }
+  
+.imgcard{
+    width: 12rem;
+    padding: 19px;
+}
+  #carrito ul li h4 {
+    padding-top: 10px;
+  }
+  #carrito .pagar {
+    position: fixed;
+    bottom: -1px;
+    font-weight: bold;
+    color: rgb(29, 23, 23);
+	background: rgb(255, 255, 255);
+    inline-size: 99%;
+    block-size: 40px;
+    position: fixed;
+     
+  }
+
+ 
+body.active{
+    overflow: hidden;
+}
+
+  
+ .cont-search.active{
+    display: none;
+ }
+ #section.activee{
+    display: none;
+ }
+ #footer.active{
+    display: none;
+ }

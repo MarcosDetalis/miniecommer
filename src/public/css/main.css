@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    background: rgb(255, 255, 255);
+    margin: auto;
+    padding-top: 80px;
+}
+
+section.active {
+    transform: translateY(100%);
+    visibility: hidden;
+}
+
+section.notcked {
+    visibility: visible;
+    transition: 0.6s;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /*el navegador determina el tamaño*/
+    grid-gap: 20px;
+    /*espacio entre fila y columna*/
+    padding: 20px;
+}
+
+.container .card {
+    width: 100%;
+    background: rgb(255, 254, 254);
+}
+
+.container .card .imgBx {
+    position: relative;
+    width: 100%;
+    height: 26rem;
+    /* cambios de 100% */
+    overflow: hidden;
+}
+
+.container .card .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    /* transform-origin: right; */
+    transition: 0.9s ease-in-out;
+}
+
+.container .card:hover .imgBx img {
+    transform: scale(1.2);
+    /*modifica el tamaño de la imagen */
+    transition: 0.9s ease-in-out;
+    /* efecto de transicion inicio y final lentos */
+}
+
+.action {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.action li {
+    position: relative;
+    list-style: none;
+    width: 40px;
+    height: 40px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    cursor: pointer;
+    transform: translateX(60px);
+    transition: transform 0.5s;
+}
+
+.action li:nth-child(2) {
+    /* toma el numero del elemento osea el <li> 2 */
+    transition-delay: 0.15s;
+    /* la cantidad del tiempo de la transiccion del punto 1 al 2 */
+}
+
+.action li:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.container .card:hover .action li {
+    transform: translateX(0px);
+}
+
+.action li:hover {
+    background: tomato;
+    color: white;
+}
+
+.action li span {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%) translateY(20px);
+    white-space: nowrap;
+    padding: 4px 6px;
+    background: white;
+    color: black;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+
+/* cambio para mostrar las letras de los iconos */
+
+.container .card:hover span {
+    opacity: 1;
+    transform: translateY(-50%) translateY(0px);
+}
+
+.action li:hover span {
+    opacity: 1;
+    transform: translateY(-50%) translateY(0px);
+}
+
+.action li span::before {
+    /* pseodoelemento que es el primer hijo del elemento  */
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    background: rgb(255, 252, 252);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.container .card .content {
+    padding: 10px;
+}
+
+.container .card .content .productName h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    margin: 5px 0;
+}
+
+.container .card .content .price_rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .card .content .price_rating h2 {
+    font-size: 20px;
+    color: tomato;
+    font-weight: 500;
+}
+
+.container .card .content .price_rating .fa-star {
+    color: rgb(242, 242, 51);
+    cursor: pointer;
+}
+
+.container .card .content .price_rating .mitd {
+    color: rgb(211, 206, 206);
+}
+
+
+/* experimentos */
+
+@media screen and (max-width:624px) {
+    .container .card .imgBx {
+        height: 35rem;
+        width: 70%;
+        margin: auto;
+    }
+}
+
+nav {
+    background: black;
+    width: 100%;
+}
+
+.filtro{
+    display: none;
+}
+
+#msm{
+  position: relative;
+  margin: auto;
+  left: 40%;
+}

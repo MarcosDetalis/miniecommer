@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UILIBROS</title>
+    <script src="js/fontAw.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/notf.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <div id="carrito" class="active">
+        <ul>
+            <li class="carrito">
+            </li>
+            <li>
+            </li>
+        </ul>
+        <form action="pagar" method="POST">
+            <button type="submit" class="pagar stripe-button" id="pagar" disabled>Pagar: <span class="total">0G</span></button>
+             
+            <script     
+            src="//checkout.stripe.com/v2/checkout.js"
+            class="stripe-button"
+            data-key="tukey" 
+            data-currency="usd" 
+            data-name="Sin Libros " 
+            data-description="La Vida Sería Un Error" 
+            data-image="https://img.freepik.com/vector-gratis/concepto-tienda-libros-online-libro-seleccion-manual-dispositivo-internet-ilustrar_71983-1176.jpg?size=664&ext=jpg"
+            data-locale="auto" >
+          
+            </script> 
+          <script>
+            document.getElementsByClassName('stripe-button-el')[0].style.display="none";
+          </script>
+    </div>
+    </div>
+    <header>
+        <div class="header-2 header-active">
+            <nav class="navbar nav">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <span>&#9776;</span>
+                </label>
+                <label for="" class="logo">Tu espacio </label>
+                <img class="imglogo" src="img/logo.png" alt="">
+                <ul>
+                    <li> </li>
+                    <li><a href="#" class="activo inf">Inicio</a></li>
+                    <li><a href="#footer" class="inf">Contacto</a></li>
+                    <li><a href="#" class="inf">Registrase</a></li>
+                    <li><a href="#" class="inf">Ingresar</a></li>
+                    <li class="linotf"> <button type="button" class="icon-button ">
+                            <span class="material-icons"><i class="fas fa-shopping-cart red"></i></span>
+                            <span class="icon-button__badge">0</span>
+                        </button></li>
+                </ul>
+                <div class="notf ">
+                    <button type="button" class="icon-button">
+                        <span class="material-icons"><i class="fas fa-shopping-cart red"></i></span>
+                        <span class="icon-button__badge respoms">0</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container-slider">
+        <div class="slider-contenedor">
+            <section class="contenido-slider">
+                <div>
+                    <h2>
+                        Consiguelo con 10% de descuento por tu primera compra.
+                    </h2>
+                    <a href="#">Contacto</a>
+                </div>
+                <img src="img/CHack.jpg" loading="lazy" alt="">
+            </section>
+            <section class="contenido-slider">
+                <div>
+                    <h2>
+                        Consiguelo con 10% de descuento por tu primera compra.
+                    </h2>
+                    <a href="#">Contacto</a>
+                </div>
+                <img src="img/oveja5.jpg"loading="lazy" alt="">
+            </section>
+            <section class="contenido-slider">
+                <div>
+                    <h2>
+                        Consiguelo con 10% de descuento por tu primera compra.
+                    </h2>
+                    <a href="#">Contacto</a>
+                </div>
+                <img src="img/fundacionç.jpg" loading="lazy" alt="">
+            </section>
+            <section class="contenido-slider">
+                <div>
+                    <h2>
+                        Consiguelo con 10% de descuento por tu primera compra.
+                    </h2>
+                    <a href="#">Contacto</a>
+                </div>
+                <img src="img/CHack.jpg" loading="lazy" alt="">
+            </section>
+        </div>
+        <div class="box">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="cont-search">
+        <input type="text" name="" id="search" placeholder="Buscar"> <input type="button" class="search"  value="Buscar">
+    </div>
+    <section id="section" class="">
+        <p id="msm"> </p>
+        <div class="container">
+            <div class="card">
+                <div class="imgBx">
+                    <img class="img" src="img/eureka.jpg" loading="lazy"alt="">
+                    <ul class="action">
+                        <li><i class="fas fa-heart"></i>
+                            <span>Me Gusta</span>
+                        </li>
+                        <li class="agregar"><i class="fas fa-shopping-cart"></i>
+                            <span>Comprar</span>
+                        </li>
+                        <li><i class=" fas fa-eye"></i>
+                            <span>ver</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <div class="productName">
+                        <h3 class="titulo">Eureka</h3>
+                        <small class="autor">Edgar Allan Poe</small>
+                    </div>
+                    <div class="price_rating">
+                        <h2 class="precio">89.000G </h2>
+                        <div class="rating">
+
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star mitd"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img class="img" src="img/monoycerdos.jpg"loading="lazy" alt="">
+                    <ul class="action">
+                        <li><i class="fas fa-heart"></i>
+                            <span>Me Gusta</span>
+                        </li>
+                        <li class="agregar"> <i class="fas fa-shopping-cart"></i>
+                            <span>Comprar</span>
+                        </li>
+                        <li><i class=" fas fa-eye"></i>
+                            <span>ver</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <div class="productName">
+                        <h3 class="titulo">Si venimos del mono por que somos tan cerdos</h3>
+                        <small class="autor">Cientificos sobre ruedas</small>
+                    </div>
+                    <div class="price_rating">
+                        <h2 class="precio">110.000G</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star mitd"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="imgBx">
+                    <img class="img" src="img/elcuervo.jpg"loading="lazy" alt="">
+                    <ul class="action">
+                        <li><i class="fas fa-heart"></i>
+                            <span>Me Gusta</span>
+                        </li>
+                        <li class="agregar"><i class="fas fa-shopping-cart"></i>
+                            <span>Comprar</span>
+                        </li>
+                        <li><i class=" fas fa-eye"></i>
+                            <span>ver</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <div class="productName">
+                        <h3 class="titulo">El Cuervo</h3>
+                        <small class="autor">Edgar Allan Poe</small>
+                    </div>
+                    <div class="price_rating">
+                        <h2 class="precio">90.000G</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="imgBx">
+                    <img class="img" src="img/malybien.jpg"loading="lazy" alt="">
+                    <ul class="action">
+                        <li><i class="fas fa-heart"></i>
+                            <span>Me Gusta</span>
+                        </li>
+                        <li class="agregar"><i class="fas fa-shopping-cart"></i>
+                            <span>Comprar</span>
+                        </li>
+                        <li><i class=" fas fa-eye"></i>
+                            <span>ver</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <div class="productName">
+                        <h3 class="titulo">Mas alla del bien y del mal</h3>
+                        <small class="autor">Friedrich Nietzche</small>
+                    </div>
+                    <div class="price_rating">
+                        <h2 class="precio">60.000G</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star mitd"></i>
+                            <i class="fas fa-star mitd"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img class="img" src="img/elgatonegro.jpg" loading="lazy" alt="">
+                    <ul class="action">
+                        <li><i class="fas fa-heart"></i>
+                            <span>Me Gusta</span>
+                        </li>
+                        <li class="agregar"><i class="fas fa-shopping-cart"></i>
+                            <span>Comprar</span>
+                        </li>
+                        <li><i class=" fas fa-eye"></i>
+                            <span>ver</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content">
+                    <div class="productName">
+                        <h3 class="titulo">El Gato Negro</h3>
+                        <small class="autor">Edgar Allan Poe</small>
+                    </div>
+                    <div class="price_rating">
+                        <h2 class="precio">70.000G</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star mitd"></i>
+                            <i class="fas fa-star mitd"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="footer-content">
+            <h3>Invictus</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            <ul class="socials">
+                <li>
+                    <a href="" class="social"> <i class="fab fa-facebook"> </i></a>
+                </li>
+                <li>
+                    <a href="" class="social"> <i class="fab fa-twitter"> </i></a>
+                </li>
+                <li>
+                    <a href="" class="social"> <i class="fab fa-google-plus"> </i></a>
+                </li>
+                <li>
+                    <a href="" class="social"> <i class="fab fa-youtube"> </i></a>
+                </li>
+                <li>
+                    <a href="" class="social"> <i class="fab fa-linkedin"> </i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-botton">
+            <p>copyright &copy;2021 code-diseño <span>Detalis </span></p>
+        </div>
+    </footer>
+</body>
+<script src="js/main.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/buscar.js"></script>
+
+<script type="text/javascript">
+    // Create an instance of the Stripe object with your publishable API key
+    var stripe = Stripe("tukey");
+    var checkoutButton = document.getElementById("pagar");
+    checkoutButton.addEventListener("click", function () {
+      fetch("/create-checkout-session", {
+        method: "POST",
+      })
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (session) {
+          return stripe.redirectToCheckout({ sessionId: session.id });
+        })
+        .then(function (result) {
+         
+          if (result.error) {
+            alert(result.error.message);
+          }
+        })
+        .catch(function (error) {
+          console.error("Error:", error);
+        });
+    });
+  </script>
+</html>
