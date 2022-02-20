@@ -1,3 +1,4 @@
 # miniecommer
 miniecommer
-utilizando la pasarela de pago stripe
+utilizando la pasarela de pago stripe, se añadira mejoras
+
